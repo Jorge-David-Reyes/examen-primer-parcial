@@ -38,7 +38,7 @@ public class Main {
     }
 
     private static Hotel prepareHotel() {
-        Hotel hotel = new Hotel("Comfort POO Inn");
+        Hotel hotel = new Hotel("Comfort POO Inn", 2, 1);
 
         hotel.addRoom(new Room(100, "1-BED-KING", RoomStatus.CLEAN)); // Room receives room number and room description
         hotel.addRoom(new Room(101, "2-BED-QUEEN", RoomStatus.CLEAN));
@@ -62,6 +62,8 @@ public class Main {
         ArrayList<Room> rooms = hotel.getRooms();
 
         System.out.println("Total rooms: " + rooms.size());
+        System.out.println("Total pools: " + hotel.getPools());
+        System.out.println("Total gyms: " + hotel.getGyms());
         System.out.println();
         System.out.println("Room statuses");
         for (Room room : rooms) {
